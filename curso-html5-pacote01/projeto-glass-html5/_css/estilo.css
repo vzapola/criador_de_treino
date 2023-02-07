@@ -1,4 +1,9 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&display=swap');
+@font-face {
+    font-family: 'FonteLogo';
+    src: url("../_fonts/bubblegum-sans-regular.otf");
+}
 
 body {
     background-color: #eeeeee;
@@ -27,14 +32,14 @@ header#cabecalho img#icone {
 
 header#cabecalho {
     border-bottom: 1px #606060 solid;
-    height: 150px;
-    background: url("../_imagens/cabecalho.png") no-repeat 0px 80px;
+    height: 160px;
+    background: url("../_imagens/cabecalho.png") no-repeat 0px 90px;
 
 }
 
 header#cabecalho h1 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 30pt;
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 40pt;
     color: #606060;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, .6);
     padding: 0px;
@@ -42,7 +47,7 @@ header#cabecalho h1 {
 }
 
 header#cabecalho h2 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Signika Negative', sans-serif;
     color: #888888;
     font-size: 15pt;
     padding: 0px;
@@ -118,4 +123,27 @@ nav#menu a {
 
 nav#menu a:hover {
     color: #ffffff;
+}
+
+section#corpo {
+    display:block;
+    width: 800px;
+    float: left;
+    border-right: 1px solid #606060;
+    padding-right: 20px;
+}
+
+aside#lateral {
+    display: block;
+    width: 410px;
+    float: right;
+}
+
+footer#rodape {
+    clear: both;
+    border-top: 1px solid #606060;
+}
+
+footer#rodape p {
+    text-align: center;
 }
