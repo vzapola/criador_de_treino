@@ -5,9 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="_css/estilo.css" />
+    <link rel="stylesheet" href="_css/estilo.css"/> 
+    <link rel="stylesheet" href="_css/fotos.css"/>
+    <link rel="stylesheet" href="_css/form.css"/>
 </head>
 <script src="_javascript/funcoes.js"></script>
+<script>
+    function calc_total() {
+        var qtd = parseInt(document.getElementById('cQtd').value);
+        tot = qtd * 1500;
+        document.getElementById('cPre').value = tot;
+    }
+</script>
 
 <body>
     <div id="interface">
@@ -32,39 +41,73 @@
 
         </header>
 
-Fale Conosco > Contato
-Formulário de Contato
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
+<section id="corpo-full">
+    <article id="noticia-principal">
+        <header id="cabecalho-artigo">
+            <hgroup>
+                <h3 class="esquerd">Fale Conosco > Contato</h3>
+                <h1>Formulário de Contato</h1>
+                <h2>por Vinicius Zapola</h2>
+                <h3>Atualizado em fev/2023</h3>
+            </hgroup>
+        </header>
+    
 
-Identificação do Usuário
-    Nome:
-    Senha:
-    E-mail:
-    Sexo:
-        - Masculino
-        - Feminino
-    Data de Nascimento:
+        <form method="post" id="fContato" action="mailto:vzapola@hotmail.com" oninput="calc_total();">
+            <fieldset>
+                <legend id="usuario">Identificação do Usuário</legend>
+            <p><label for="cNome">Nome:</label> <input type="text" name="tNome" id="cNome" size="20" maxlength="50" placeholder="nome completo"> </p>
+            <p>Senha: <input type="password" name="tSenha" id="cSenha" size="8" maxlength="12" placeholder="senha"></p>
+            <p>E-mail: <input type="email" name="tMail" id="cMail"></p>
+            <fieldset id="sexo">
+                <legend>Sexo:</legend>
+                    <input type="radio" name="tSexo" id="cMasc"> <label for="cMasc">Masculino</label><br>
+                    <input type="radio" name="tSexo" id="cFem"> <label for="cFem">Feminino</label>
+            </fieldset>
+            <p>Data de Nascimento: <input type="date" name="tData" id="cData"></p>
+            </fieldset>
 
-Endereço do Usuário
-    Logradouro:
-    Número:
-    Estado:
-    Cidade:
+        <fieldset>
+            <legend id="endereco">Endereço do Usuário</legend>
+            <p><label for="cLog">Logradouro: </label><input type="text" name="tLog" id="cLog"></p>
+            <p><label for="cNum">Número:</label> <input type="number" name="tNum" id="cNum" min="0" max="99999"></p>
+            <p><label for="cEst">Estado:</label> <select name="tEst" id="cEst">
+                <optgroup label="Região Sudeste"><option value="">RJ</option>
+                <option value="">SP</option>
+                <option value="">ES</option>
+                </optgroup>
+                <optgroup label="Região Nordeste"><option value="">BA</option>
+                <option value="">PE</option>
+                <option value="">RN</option>
+                </optgroup>
+            </select></p>
+            <p><label for="cCid">Cidade:</label> <input type="text" name="tCid" id="cCid" list="cidades">
+            <datalist id="cidades">
+                <option value="Rio de Janeiro"></option>
+                <option value="Nova Iguaçu"></option>
+                <option value="Niterói"></option>
+                <option value="Belford Roxo"></option>
+            </datalist></select></p>
+        </fieldset>
 
-Mensagem do Usuário
-    Grau de Urgência:
-    Mensagem:
+        <fieldset>
+            <legend id="mensagem"> Mensagem do Usuário</legend>
+            <p><label for="cGra">Grau de Urgência:</label> Min. <input type="range" name="tGra" id="cGra" min="0" max="10" step="1">Máx.</p>
+            <p><label for="cMen">Mensagem:</label><textarea name="tMen" id="cMen" cols="45" rows="5"></textarea></p>
+        </fieldset>
 
-Quero um Google Glass
-    Gostaria de adquirir um Google Glass quando disponível
-    Cor:
-    Quantidade:
-    Preço Total: R$
+        <fieldset> 
+            <legend id="pedido">Quero um Google Glass</legend>
+            <p><label for="cAdq"><input type="checkbox" name="tAdq" id="cAdq" checked>Gostaria de adquirir um Google Glass quando disponível</label></p>
+            <p><label for="cCor">Cor:</label><input type="color" name="tCor" id="cCor" value="#0000FF"></p>
+            <p><label for="cQtd">Quantidade:</label><input type="number" name="tQtd" id="cQtd"></p>
+            <p><label for="cPre">Preço Total: R$</label><input type="text" name="tPre" id="cPre" readonly></p>
+        </fieldset>
 
-
-[BOTÃO ENVIAR]
-
+        <input type="submit">
+        </form>
+</article>
+</section>
 <footer id="rodape">
     <p>Copyright &copy; 2023 - by Vinicius Zapola <br/>
     <a href="https://www.linkedin.com/in/viniciuszapola/" target="_blank">Linkedin</a> | 
