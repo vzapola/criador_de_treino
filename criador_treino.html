@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial de Workout</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+
+
+<body>
+
+    <img src="../criador de treino/figuras/boneco_inicial.png" id="inicial" usemap="#imageMap"/>
+
+    <map name="imageMap">
+      <area shape="poly" coords="185,150,203,139,213,136,222,129,223,149,212,156,197,153,185,150,279,131,288,137,316,150,289,156,278,148" onmouseover="changeImage(trapezio)" onmouseout="changeImage(boneco_inicial)" />
+    </map>
+    
+    <script>
+      const boneco_inicial = new Image();
+      boneco_inicial.src = "../criador de treino/figuras/boneco_inicial.png";
+      
+      const trapezio = new Image();
+      trapezio.src = "../criador de treino/figuras/trapezio.png";
+    
+      function changeImage(newImage) {
+        document.getElementById("inicial").src = newImage.src;
+      }
+    </script>
+    
+</body>
+</html>
