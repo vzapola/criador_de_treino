@@ -8,11 +8,76 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 
+<script>
+    const boneco_inicial = new Image();
+    boneco_inicial.src = "../criador de treino/figuras/boneco_inicial.png";
+    
+    const trapezio = new Image();
+    trapezio.src = "../criador de treino/figuras/trapezio.png";
 
+    const ablado = new Image();
+    ablado.src = "../criador de treino/figuras/ablado.png";
+
+    const abreto = new Image();
+    abreto.src = "../criador de treino/figuras/abreto.png";
+  
+    const antebraco = new Image();
+    antebraco.src = "../criador de treino/figuras/antebraco.png";
+  
+    const biceps = new Image();
+    biceps.src = "../criador de treino/figuras/biceps.png";
+    
+    const costas = new Image();
+    costas.src = "../criador de treino/figuras/costas.png";
+    
+    const gluteos = new Image();
+    gluteos.src = "../criador de treino/figuras/gluteos.png";
+    
+    const ombro = new Image();
+    ombro.src = "../criador de treino/figuras/ombro.png";
+    
+    const panturrilha = new Image();
+    panturrilha.src = "../criador de treino/figuras/panturrilha.png";
+  
+    const peito = new Image();
+    peito.src = "../criador de treino/figuras/peito.png";
+  
+    const posterior = new Image();
+    posterior.src = "../criador de treino/figuras/posterior.png";
+  
+    const quadriceps = new Image();
+    quadriceps.src = "../criador de treino/figuras/quadriceps.png";
+  
+    const triceps = new Image();
+    triceps.src = "../criador de treino/figuras/triceps.png";
+
+    const lombar = new Image();
+    lombar.src = "../criador de treino/figuras/lombar.png";
+
+    const midcostas = new Image();
+    midcostas.src = "../criador de treino/figuras/midcostas.png";
+      
+    function changeImage(newImage) {
+      document.getElementById("inicial").src = newImage.src;
+    }
+  </script>
 
 <body>
 
-    <img src="../criador de treino/figuras/boneco_inicial.png" id="inicial" usemap="#imageMap"/>
+    <header>
+        <h1>Criador de Treino</h1>
+        <menu>
+            <ul>
+                <li><a href="#">Por Músculo</a></li>
+                <li><a href="#">Por Exercício</a></li>
+                <li><a href="#">Contato</a></li>              
+            </ul>
+        </menu>
+    </header>
+
+    <div id="imagem_principal">
+    <img src="../criador de treino/figuras/boneco_inicial.png" id="inicial" usemap="#imageMap" width="auto" height="auto"/>
+</div>
 
     <map name="imageMap">
       <area shape="poly" coords="187,150,198,142,214,136,222,130,222,150,211,156,185,151" onmouseover="changeImage(trapezio)" onmouseout="changeImage(boneco_inicial)" href="trapezio.html" target="_blank"/>
@@ -61,7 +126,7 @@
 
       <area shape="poly" coords="661,353,645,403,655,428,690,437,699,476,677,573,667,580,659,573,655,548,641,571,631,553,623,492,639,371,657,355" onmouseover="changeImage(posterior)" onmouseout="changeImage(boneco_inicial)" href=".html" target="_blank"/>
 
-      <area shape="poly" coords="718,479,729,435,767,425,774,401,759,352,781,370,795,462,794,517,780,570,762,547,752,580738,564,719,474" onmouseover="changeImage(posterior)" onmouseout="changeImage(boneco_inicial)" href=".html" target="_blank"/>
+      <area shape="poly" coords="718,479,729,435,767,425,774,401,759,352,781,370,795,462,794,517,780,570,762,547,752,580,738,564,719,474" onmouseover="changeImage(posterior)" onmouseout="changeImage(boneco_inicial)" href=".html" target="_blank"/>
 
       <area shape="poly" coords="184,357,203,399,232,510,223,558,204,576,175,554,165,476,183,356" onmouseover="changeImage(quadriceps)" onmouseout="changeImage(boneco_inicial)" href=".html" target="_blank"/>
 
@@ -71,55 +136,11 @@
 
       <area shape="poly" coords="797,198,829,204,861,264,845,268,840,287,825,280,795,240" onmouseover="changeImage(triceps)" onmouseout="changeImage(boneco_inicial)" href=".html" target="_blank"/>
 
+      <area shape="poly" coords="673,344,676,332,675,307,697,257,698,239,708,256,718,239,722,265,740,304,745,346,726,345,70,363,689,345,672,345" onmouseover="changeImage(lombar)" onmouseout="changeImage(boneco_inicial)" href=".html" target="_blank"/>
+
+      <area shape="poly" coords="669,168,748,167,708,255,668,168" onmouseover="changeImage(midcostas)" onmouseout="changeImage(boneco_inicial)" href=".html" target="_blank"/>
+
     </map>
-    
-    <script>
-      const boneco_inicial = new Image();
-      boneco_inicial.src = "../criador de treino/figuras/boneco_inicial.png";
-      
-      const trapezio = new Image();
-      trapezio.src = "../criador de treino/figuras/trapezio.png";
-
-      const ablado = new Image();
-      ablado.src = "../criador de treino/figuras/ablado.png";
-
-      const abreto = new Image();
-      abreto.src = "../criador de treino/figuras/abreto.png";
-    
-      const antebraco = new Image();
-      antebraco.src = "../criador de treino/figuras/antebraco.png";
-    
-      const biceps = new Image();
-      biceps.src = "../criador de treino/figuras/biceps.png";
-      
-      const costas = new Image();
-      costas.src = "../criador de treino/figuras/costas.png";
-      
-      const gluteos = new Image();
-      gluteos.src = "../criador de treino/figuras/gluteos.png";
-      
-      const ombro = new Image();
-      ombro.src = "../criador de treino/figuras/ombro.png";
-      
-      const panturrilha = new Image();
-      panturrilha.src = "../criador de treino/figuras/panturrilha.png";
-    
-      const peito = new Image();
-      peito.src = "../criador de treino/figuras/peito.png";
-    
-      const posterior = new Image();
-      posterior.src = "../criador de treino/figuras/posterior.png";
-    
-      const quadriceps = new Image();
-      quadriceps.src = "../criador de treino/figuras/quadriceps.png";
-    
-      const triceps = new Image();
-      triceps.src = "../criador de treino/figuras/triceps.png";
-        
-      function changeImage(newImage) {
-        document.getElementById("inicial").src = newImage.src;
-      }
-    </script>
     
 </body>
 </html>
